@@ -21,7 +21,7 @@ class Triangle(Shape):
         self.b = b
         self.c = c
 
-        # Сортируем стороны для удобства
+        
         sides = sorted([self.a, self.b, self.c])
 
         if sides[0] <= 0 or sides[1] <= 0 or sides[2] <= 0:
@@ -30,7 +30,7 @@ class Triangle(Shape):
         if sides[0] + sides[1] <= sides[2]:
             raise ValueError("Невозможно построить треугольник с такими сторонами")
 
-        # Переприсваиваем уже отсортированные значения
+        
         self.a, self.b, self.c = sides
 
     def area(self):
